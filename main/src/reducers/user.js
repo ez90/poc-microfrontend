@@ -4,7 +4,7 @@ const initialState = {
 
 const userReducer = (state = initialState, { type, ...payload }) => {
     switch (type) {
-        case 'SET_NAME':
+        case 'SET_USER_NAME':
             return {
                 ...state,
                 name: payload.name,
