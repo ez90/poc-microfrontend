@@ -2,11 +2,12 @@ import React from 'react';
 import Header from "./components/Header";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Provider } from 'react-redux';
-import { store } from './store';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import createStore from './createStore';
 
 const useStyles = makeStyles((theme) => ({
     menu: {
@@ -43,6 +44,7 @@ function Home() {
 
 export default () => {
     const classes = useStyles();
+    const store = createStore();
 
     return (
         <>
@@ -69,8 +71,9 @@ export default () => {
                                         <Home />
                                     </Route>
                                     <Route exact path="/product">
-                                        <Product store={store} />
+                                        <Product />
                                     </Route>
+                                    {/* Add store of the main application if the sub-application need it */}
                                     <Route exact path="/account">
                                         <Account store={store} />
                                     </Route>
