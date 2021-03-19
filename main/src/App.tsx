@@ -29,11 +29,11 @@ export default () => {
                                     <Route exact path="/">
                                         <HomePage />
                                     </Route>
-                                    <Route exact path="/product">
+                                    <Route path="/product">
                                         <Product />
                                     </Route>
                                     {/* Add store of the main application if the sub-application need it */}
-                                    <Route exact path="/account">
+                                    <Route path="/account">
                                         <Account store={store} />
                                     </Route>
                                 </Switch>
