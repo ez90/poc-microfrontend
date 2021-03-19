@@ -1,5 +1,5 @@
 const initialState = {
-    name: null,
+    name: '',
 };
 
 export const userReducer = (state = initialState, { type, ...payload }) => {

@@ -1,5 +1,5 @@
 const initialState = {
-    isOpen: null,
+    isOpen: false,
 };
 
 export const modalReducer = (state = initialState, { type, ...payload }) => {
