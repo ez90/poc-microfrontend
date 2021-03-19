@@ -2,7 +2,7 @@ const initialState = {
     name: null,
 };
 
-const userReducer = (state = initialState, { type, ...payload }) => {
+export const userReducer = (state = initialState, { type, ...payload }) => {
     switch (type) {
         case 'SET_USER_NAME':
             return {
@@ -13,5 +13,3 @@ const userReducer = (state = initialState, { type, ...payload }) => {
             return state;
     }
 };
-
-export default userReducer;
