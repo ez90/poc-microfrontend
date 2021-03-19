@@ -1,40 +1,44 @@
 import React, {useState} from 'react';
 import {Provider, useSelector, useDispatch} from 'react-redux';
 import { setUserName } from '../../main/src/redux/actions';
+import { setModalState } from './redux/actions';
+import Modal from './components/Modal';
+import createMainStore from './mainRedux/createStore';
+import createStore from './redux/createStore';
+import OpenModal from './components/OpenModal';
+import Settings from './components/Settings';
 
 const App = () => {
-    const dispatch = useDispatch();
-    const user = useSelector((state) => state?.user);
-    const [name, setName] = useState(user?.name);
+    const store = createStore();
 
     return (
-        <div style={{marginTop: '10px'}}>
+        <>
+        {/* <Provider store={store}> */}
             <h1>App 2</h1>
-            <div>
-                Change the name
-            </div>
-
-            <div>
-                <input
-                    style={{marginRight: '10px'}}
-                    type="text"
-                    onChange={(e) => {
-                        setName(e.target.value);
-                    }}
-                />
-                <button onClick={() => dispatch(setUserName(name))}>
-                    Dispatch App 2 new name
-                </button>
-            </div>
-        </div>
+            <Settings />
+            <OpenModal />
+            <Modal />
+        {/* </Provider> */}
+        </>
     );
 };
 
-const AppWrapper = ({ store }) => (
-    // TODO: add fake store  
-    <Provider store={store || {}}>
-        <App/>
-    </Provider>
-);
+const AppWrapper = ({ store }) => 
+{
+    console.log('App wrapper', store)
+    // TODO: add fake store 
+    const computedStore = store ? store : createMainStore();
+    console.log('aaaa')
+
+    const mainContext = React.createContext({});
+
+    return (
+        <Provider context={mainContext} store={computedStore}>
+            <Provider store={createStore()}>
+            <App/>
+            </Provider>
+        </Provider>
+    );
+}
 
 export default AppWrapper;

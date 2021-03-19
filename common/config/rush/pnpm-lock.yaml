@@ -2,7 +2,6 @@ dependencies:
   '@babel/core': 7.13.10
   '@babel/preset-react': 7.12.13_@babel+core@7.13.10
   '@babel/preset-typescript': 7.13.0_@babel+core@7.13.10
-  '@material-ui/core': 4.11.3_e342ee84aa4c58264377ee43e7695221
   '@pixability-ui/federated-types': 0.0.5_typescript@4.2.3
   '@rush-temp/account': file:projects/account.tgz
   '@rush-temp/main': file:projects/main.tgz
@@ -11,6 +10,7 @@ dependencies:
   '@types/react-dom': 17.0.2
   '@types/react-redux': 7.1.16
   '@types/react-router-dom': 5.1.7
+  '@types/styled-react-modal': 1.2.0
   '@types/webpack-env': 1.16.0
   babel-loader: 8.2.2_2dff5409bc248564bb727dc13a54bb9a
   bundle-loader: 0.5.6
@@ -24,6 +24,7 @@ dependencies:
   serve: 11.3.2
   source-map-loader: 2.0.1_webpack@5.26.3
   styled-components: 4.4.1_react-dom@17.0.1+react@17.0.1
+  styled-react-modal: 2.0.1_9047a8b5150f09c4e4af90299d85ec90
   typescript: 4.2.3
   webpack: 5.26.3_webpack-cli@4.5.0
   webpack-cli: 4.5.0_db05165bce46c945a2b1e169298b5df4
@@ -596,6 +597,21 @@ packages:
     dev: false
     resolution:
       integrity: sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
+  /@types/styled-components/5.1.9:
+    dependencies:
+      '@types/hoist-non-react-statics': 3.3.1
+      '@types/react': 17.0.3
+      csstype: 3.0.7
+    dev: false
+    resolution:
+      integrity: sha512-kbEG6YlwK8rucITpKEr6pA4Ho9KSQHUUOzZ9lY3va1mtcjvS3D0wDciFyHEiNHKLL/npZCKDQJqm0x44sPO9oA==
+  /@types/styled-react-modal/1.2.0:
+    dependencies:
+      '@types/react': 17.0.3
+      '@types/styled-components': 5.1.9
+    dev: false
+    resolution:
+      integrity: sha512-g+mtpYcekjAgnyKRN+xQ4bo5GQmiNdoXZ+XGb374uIgxSXx3+Wnb643o49MprYYcTTupzHf8scK3SDTzcf42Gw==
   /@types/webpack-env/1.16.0:
     dev: false
     resolution:
@@ -4453,6 +4469,18 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-RNqj14kYzw++6Sr38n7197xG33ipEOktGElty4I70IKzQF1jzaD1U4xQ+Ny/i03UUhHlC5NWEO+d8olRCDji6g==
+  /styled-react-modal/2.0.1_9047a8b5150f09c4e4af90299d85ec90:
+    dependencies:
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+      styled-components: 4.4.1_react-dom@17.0.1+react@17.0.1
+    dev: false
+    peerDependencies:
+      react: ^16.9.0
+      react-dom: ^16.9.0
+      styled-components: ^5.0.1
+    resolution:
+      integrity: sha512-uoyPlwdM8FLmdOE8dvA3iv2IOnlqMsygPxLAZy8WaK0pEcon67+SWJY/osAWZuBvRKtSo/VXn1fRCYVgbD0KUQ==
   /stylis-rule-sheet/0.0.10_stylis@3.5.4:
     dependencies:
       stylis: 3.5.4
@@ -5025,6 +5053,7 @@ packages:
       '@types/react-dom': 17.0.2
       '@types/react-redux': 7.1.16
       '@types/react-router-dom': 5.1.7
+      '@types/styled-react-modal': 1.2.0
       '@types/webpack-env': 1.16.0
       babel-loader: 8.2.2_2dff5409bc248564bb727dc13a54bb9a
       bundle-loader: 0.5.6
@@ -5037,6 +5066,7 @@ packages:
       serve: 11.3.2
       source-map-loader: 2.0.1_webpack@5.26.3
       styled-components: 4.4.1_react-dom@17.0.1+react@17.0.1
+      styled-react-modal: 2.0.1_9047a8b5150f09c4e4af90299d85ec90
       typescript: 4.2.3
       webpack: 5.26.3_webpack-cli@4.5.0
       webpack-cli: 4.5.0_db05165bce46c945a2b1e169298b5df4
@@ -5044,7 +5074,7 @@ packages:
     dev: false
     name: '@rush-temp/account'
     resolution:
-      integrity: sha512-4e3QzT+UFdfHs23tjRIHG5cyr3GfFU4rur9Az5CTqkfdmZUbA6rNqbjMYLZI/B9/Yawx6OvoqbwjJF1BEJanUQ==
+      integrity: sha512-PEsqoBksX2184Uvz4T6tUv1as0ZghiO6KXDArA37UHl8lP4urDDEazjInXs/6uBiuC53L4JSMg3Zk2ITT5VsFw==
       tarball: file:projects/account.tgz
     version: 0.0.0
   file:projects/main.tgz:
@@ -5078,7 +5108,7 @@ packages:
     dev: false
     name: '@rush-temp/main'
     resolution:
-      integrity: sha512-44SpBvrR3Yr/ULFQVuyyWKrtKRbxUUD868PcXa7XhX0QcOak223eQBVjWntNvQwUdhT0wMhDSWXEAhdWMVmAsw==
+      integrity: sha512-rIFZ2l4RDTYBkJ//aEXhcWJhQkklx4/40t2Y6UfIha7qcyxN3bJQnEkQKXJM0aqULK1ZdeLbVnTTMKdIdcO2DQ==
       tarball: file:projects/main.tgz
     version: 0.0.0
   file:projects/product.tgz:
@@ -5108,7 +5138,7 @@ packages:
     dev: false
     name: '@rush-temp/product'
     resolution:
-      integrity: sha512-zvx7M/Ofvvz4b7XTqz6pUIqta51d6ach3xHAl4uTdBTr7K7eMTX5Zbs78jRlP3sO01tQgBCEttN+WH3h1W7uUQ==
+      integrity: sha512-WJRSNQvLoQp3Bu02hIbqT8W1E2FffVmsyD9zX8KDhhjT2GFBwI8Tm6LyQ+a7dkavMptLUx9ZFdhR44fxUHCeoQ==
       tarball: file:projects/product.tgz
     version: 0.0.0
 registry: ''
@@ -5116,7 +5146,6 @@ specifiers:
   '@babel/core': ^7.13.10
   '@babel/preset-react': ^7.12.13
   '@babel/preset-typescript': ^7.13.0
-  '@material-ui/core': ^4.11.3
   '@pixability-ui/federated-types': 0.0.5
   '@rush-temp/account': file:./projects/account.tgz
   '@rush-temp/main': file:./projects/main.tgz
@@ -5125,6 +5154,7 @@ specifiers:
   '@types/react-dom': ^17.0.2
   '@types/react-redux': ^7.1.16
   '@types/react-router-dom': ^5.1.7
+  '@types/styled-react-modal': ^1.2.0
   '@types/webpack-env': ^1.16.0
   babel-loader: ^8.2.2
   bundle-loader: ^0.5.6
@@ -5138,6 +5168,7 @@ specifiers:
   serve: ^11.3.2
   source-map-loader: ^2.0.1
   styled-components: ^4.3.2
+  styled-react-modal: ^2.0.1
   typescript: ^4.2.3
   webpack: ^5.26.0
   webpack-cli: ^4.5.0
