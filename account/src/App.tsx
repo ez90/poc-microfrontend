@@ -7,6 +7,7 @@ import createMainStore from './mainRedux/createStore';
 import createStore from './redux/createStore';
 import OpenModal from './components/OpenModal';
 import Settings from './components/Settings';
+import localReducer from './redux/reducers';
 
 const App = () => {
     const store = createStore();
@@ -25,18 +26,17 @@ const App = () => {
 
 const AppWrapper = ({ store }) => 
 {
-    console.log('App wrapper', store)
-    // TODO: add fake store 
+    console.log({store})
     const computedStore = store ? store : createMainStore();
-    console.log('aaaa')
+    console.log({computedStore})
 
-    const mainContext = React.createContext({});
+    React.useEffect(() => {
+        computedStore.injectReducer('local', localReducer);
+    }, []);
 
     return (
-        <Provider context={mainContext} store={computedStore}>
-            <Provider store={createStore()}>
+        <Provider store={computedStore}>
             <App/>
-            </Provider>
         </Provider>
     );
 }

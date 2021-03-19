@@ -1,14 +1,34 @@
-import { applyMiddleware, createStore, compose } from 'redux';
-import thunkMiddleware from 'redux-thunk';
-import rootReducer from './reducers';
+import { combineReducers, createStore, compose } from 'redux';
+import reducers from './reducers';
 
-// eslint-disable-next-line no-underscore-dangle
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+/**
+ * Cf. redux docs:
+ * https://redux.js.org/recipes/code-splitting/#defining-an-injectreducer-function
+ */
+export default function configureStore() {
+    const composeEnhancers =
+        typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+            ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+            : compose;
 
-export default (initialState = {}, extraArguments = null) => createStore(
-    rootReducer,
-    initialState,
-    composeEnhancers(applyMiddleware(
-        thunkMiddleware.withExtraArgument(extraArguments),
-    )),
-);
+    const enhancer = composeEnhancers();
+    const store = createStore(createReducer(), enhancer);
+
+    store.asyncReducers = {};
+
+    store.injectReducer = (key, asyncReducer) => {
+        store.asyncReducers[key] = asyncReducer;
+        store.replaceReducer(createReducer(store.asyncReducers));
+    };
+
+    return store;
+}
+
+function createReducer(asyncReducers) {
+    return combineReducers({
+        ...reducers,
+        ...asyncReducers,
+    });
+}
+
+export const store = configureStore();
