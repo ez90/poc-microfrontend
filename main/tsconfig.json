@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "emitDeclarationOnly": true,
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "esnext",
     "target": "es5",
+    "lib": [ "es2015", "DOM" ],
+    "sourceMap": true,
+    "strict": true,
     "jsx": "react",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
