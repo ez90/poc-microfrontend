@@ -1,13 +1,12 @@
 import React from 'react';
-import { SLink, SWrapper } from './styles';
+import {SLink, SWrapper} from './styles';
 
-
-const Navbar = () => (
-  <SWrapper>
-    <SLink to='/'>Home</SLink>
-    <SLink to='/product'>Products</SLink>
-    <SLink to='/account'>Account</SLink>
-  </SWrapper>
+const Navbar = ({increaseCount}) => (
+    <SWrapper onClick={increaseCount}>
+        <SLink to='/'>Home</SLink>
+        <SLink to='/product/' replace>Products</SLink>
+        <SLink to='/account/'>Account</SLink>
+    </SWrapper>
 );
 
 export default Navbar;
