@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ESLintPlugin =require("eslint-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
@@ -32,6 +33,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new ESLintPlugin({
+      extensions: ["js", "jsx", "ts", "tsx"],
+    }),
     new ModuleFederationPlugin({
       name: "account",
       library: { type: "var", name: "account" },
