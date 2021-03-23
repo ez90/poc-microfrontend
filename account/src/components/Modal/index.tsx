@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ReactModal from 'styled-react-modal';
 import { setModalIsOpen } from '../../redux/actions';
+import { SModal } from './styles';
 
 const Modal = () => {
   const dispatch = useDispatch();
@@ -10,12 +10,12 @@ const Modal = () => {
   const closeModal = () => dispatch(setModalIsOpen(false));
 
   return (
-    <ReactModal
+    <SModal
       isOpen={modal?.isOpen}
       // isOpen={true}
     >
       <span>cferfergerg</span>
-    </ReactModal>
+    </SModal>
   );
 };
 

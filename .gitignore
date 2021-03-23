@@ -67,3 +67,5 @@ common/autoinstallers/*/.npmrc
 
 # Jetbrain software
 .idea
+
+package-lock.json

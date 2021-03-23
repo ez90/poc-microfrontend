@@ -40,6 +40,6 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.2",
-    "styled-react-modal": "^2.0.1"
+    "styled-react-modal": "2.0.0"
   }
 }
