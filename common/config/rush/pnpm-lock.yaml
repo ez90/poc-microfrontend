@@ -10,6 +10,7 @@ dependencies:
   '@types/react-redux': 7.1.16
   '@types/react-router-dom': 5.1.7
   '@types/styled-components': 5.1.9
+  '@types/styled-react-modal': 1.2.0
   '@types/webpack-env': 1.16.0
   '@typescript-eslint/eslint-plugin': 4.18.0_ef0f217f6395606fd8bbe7b0291eff7e
   '@typescript-eslint/parser': 4.18.0_eslint@7.22.0+typescript@4.2.3
@@ -29,6 +30,7 @@ dependencies:
   serve: 11.3.2
   source-map-loader: 2.0.1_webpack@5.27.1
   styled-components: 4.4.1_react-dom@17.0.1+react@17.0.1
+  styled-react-modal: 2.0.1_9047a8b5150f09c4e4af90299d85ec90
   typescript: 4.2.3
   webpack: 5.27.1_webpack-cli@4.5.0
   webpack-cli: 4.5.0_85f54b38dde5358134bb1426da9f2a02
@@ -531,6 +533,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-kbEG6YlwK8rucITpKEr6pA4Ho9KSQHUUOzZ9lY3va1mtcjvS3D0wDciFyHEiNHKLL/npZCKDQJqm0x44sPO9oA==
+  /@types/styled-react-modal/1.2.0:
+    dependencies:
+      '@types/react': 17.0.3
+      '@types/styled-components': 5.1.9
+    dev: false
+    resolution:
+      integrity: sha512-g+mtpYcekjAgnyKRN+xQ4bo5GQmiNdoXZ+XGb374uIgxSXx3+Wnb643o49MprYYcTTupzHf8scK3SDTzcf42Gw==
   /@types/webpack-env/1.16.0:
     dev: false
     resolution:
@@ -5374,6 +5383,18 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-RNqj14kYzw++6Sr38n7197xG33ipEOktGElty4I70IKzQF1jzaD1U4xQ+Ny/i03UUhHlC5NWEO+d8olRCDji6g==
+  /styled-react-modal/2.0.1_9047a8b5150f09c4e4af90299d85ec90:
+    dependencies:
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+      styled-components: 4.4.1_react-dom@17.0.1+react@17.0.1
+    dev: false
+    peerDependencies:
+      react: ^16.9.0
+      react-dom: ^16.9.0
+      styled-components: ^5.0.1
+    resolution:
+      integrity: sha512-uoyPlwdM8FLmdOE8dvA3iv2IOnlqMsygPxLAZy8WaK0pEcon67+SWJY/osAWZuBvRKtSo/VXn1fRCYVgbD0KUQ==
   /stylis-rule-sheet/0.0.10_stylis@3.5.4:
     dependencies:
       stylis: 3.5.4
@@ -6044,6 +6065,7 @@ packages:
       '@types/react-dom': 17.0.2
       '@types/react-redux': 7.1.16
       '@types/react-router-dom': 5.1.7
+      '@types/styled-react-modal': 1.2.0
       '@types/webpack-env': 1.16.0
       '@typescript-eslint/eslint-plugin': 4.18.0_ef0f217f6395606fd8bbe7b0291eff7e
       '@typescript-eslint/parser': 4.18.0_eslint@7.22.0+typescript@4.2.3
@@ -6062,6 +6084,7 @@ packages:
       serve: 11.3.2
       source-map-loader: 2.0.1_webpack@5.27.1
       styled-components: 4.4.1_react-dom@17.0.1+react@17.0.1
+      styled-react-modal: 2.0.1_9047a8b5150f09c4e4af90299d85ec90
       typescript: 4.2.3
       webpack: 5.27.1_webpack-cli@4.5.0
       webpack-cli: 4.5.0_85f54b38dde5358134bb1426da9f2a02
@@ -6069,7 +6092,7 @@ packages:
     dev: false
     name: '@rush-temp/account'
     resolution:
-      integrity: sha512-Z1iwPmPHpHxVKAJOFD0FdfLoIndebI4aV+vbhPju8rls7G0IlEXa/4Xn9pjhfxC0R4SWa5C9WKolNP0ec/JaIw==
+      integrity: sha512-F3695PNiMs7OsM17Rdh9hBIdkEnrezdj6YVaGRH2i/UmqejVHdOo/9PnZdfn2P0MQoorDyVmTlrP2HKhQh54ug==
       tarball: file:projects/account.tgz
     version: 0.0.0
   file:projects/main.tgz:
@@ -6146,6 +6169,7 @@ packages:
       integrity: sha512-AZ7GLkYgTcsXtnDOgWXREc9rAOq2uQM34pU3fjdalo17x7HD2PL7DD7pm1vXeoRs8V643MUw4ScYMJhMnFPWhg==
       tarball: file:projects/product.tgz
     version: 0.0.0
+registry: ''
 specifiers:
   '@babel/core': ^7.13.10
   '@babel/preset-react': ^7.12.13
@@ -6158,6 +6182,7 @@ specifiers:
   '@types/react-redux': ^7.1.16
   '@types/react-router-dom': ^5.1.7
   '@types/styled-components': ^5.1.9
+  '@types/styled-react-modal': ^1.2.0
   '@types/webpack-env': ^1.16.0
   '@typescript-eslint/eslint-plugin': ~4.18.0
   '@typescript-eslint/parser': ^4.18.0
@@ -6177,6 +6202,7 @@ specifiers:
   serve: ^11.3.2
   source-map-loader: ^2.0.1
   styled-components: ^4.3.2
+  styled-react-modal: ^2.0.1
   typescript: ^4.2.3
   webpack: ^5.26.0
   webpack-cli: ^4.5.0

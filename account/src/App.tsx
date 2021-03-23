@@ -6,12 +6,17 @@ import { modalReducer } from './redux/reducers/modal';
 
 import Settings from './components/Settings';
 import ShowModalButton from './components/ShowModalButton';
+import Modal from './components/Modal';
+import { ModalProvider } from 'styled-react-modal';
 
 const App = () => (
   <>
     <h1>App 2</h1>
     <Settings />
     <ShowModalButton />
+    <ModalProvider>
+      <Modal />
+    </ModalProvider>
   </>
 );
 
