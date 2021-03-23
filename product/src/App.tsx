@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import {SLink} from './styles';
 
-export default () => (
+const App = () => (
     <Router>
         <SLink to='/product/'>Default display</SLink>
         <SLink to='/product/cats'>Cats</SLink>
@@ -24,4 +24,6 @@ export default () => (
         </Switch>
     </Router>
 );
+
+export default App;
 
