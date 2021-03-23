@@ -13,7 +13,7 @@ import {SWrapper} from './styles';
 const Product = React.lazy(() => import('product/App'));
 const Account = React.lazy(() => import('account/App'));
 
-export default () => {
+const App = () => {
     const store = createStore();
     const [count, setCount] = React.useState(0);
 
@@ -48,3 +48,5 @@ export default () => {
         </Provider>
     )
 }
+
+export default App;
