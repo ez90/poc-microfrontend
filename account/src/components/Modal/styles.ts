@@ -9,3 +9,15 @@ export const SModal = Modal.styled`
     width: 500px;
     height: 500px;
 `;
+
+export const SModalButton = styled.button`
+    text-align: center;
+`;
+
+export const SModalTitle = styled.div`
+    text-align: center;
+`;
+
+export const SModalParagraph = styled.p`
+    text-align: center;
+`;
