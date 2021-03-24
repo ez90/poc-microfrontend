@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 const {ModuleFederationPlugin} = require("webpack").container;
 const path = require("path");
-const common = require('../webpack.common.js');
+const common = require('../common/config/webpack.common.js');
 
 module.exports = merge(common, {
     devServer: {
