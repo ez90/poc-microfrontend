@@ -1,11 +1,8 @@
-import React, { FC } from "react";
+import React from "react";
 import { useSelector } from 'react-redux';
 import { SWrapper, SLabel } from './styles';
 
-export interface HeaderProps {
-    sitename: string;
-  }
-const Header: FC<HeaderProps> = ({ sitename }) => {
+const Header = ({ sitename }) => {
     const user = useSelector((state) => state?.user);
 
     return (

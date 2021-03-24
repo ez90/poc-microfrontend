@@ -10,8 +10,6 @@ dependencies:
   '@types/react-dom': 17.0.3
   '@types/react-redux': 7.1.16
   '@types/react-router-dom': 5.1.7
-  '@types/styled-components': 5.1.9
-  '@types/styled-react-modal': 1.2.0
   '@types/webpack-env': 1.16.0
   '@typescript-eslint/eslint-plugin': 4.18.0_f26dcf5ec38a04241b14c26bc931244e
   '@typescript-eslint/parser': 4.19.0_eslint@7.22.0+typescript@4.2.3
@@ -35,6 +33,7 @@ dependencies:
   webpack: 5.28.0_webpack-cli@4.5.0
   webpack-cli: 4.5.0_79e826fa6ba9b3d255951ec0a8e55c34
   webpack-dev-server: 3.11.2_webpack-cli@4.5.0+webpack@5.28.0
+  webpack-merge: 5.7.3
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.12.11:
@@ -532,21 +531,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
-  /@types/styled-components/5.1.9:
-    dependencies:
-      '@types/hoist-non-react-statics': 3.3.1
-      '@types/react': 17.0.3
-      csstype: 3.0.7
-    dev: false
-    resolution:
-      integrity: sha512-kbEG6YlwK8rucITpKEr6pA4Ho9KSQHUUOzZ9lY3va1mtcjvS3D0wDciFyHEiNHKLL/npZCKDQJqm0x44sPO9oA==
-  /@types/styled-react-modal/1.2.0:
-    dependencies:
-      '@types/react': 17.0.3
-      '@types/styled-components': 5.1.9
-    dev: false
-    resolution:
-      integrity: sha512-g+mtpYcekjAgnyKRN+xQ4bo5GQmiNdoXZ+XGb374uIgxSXx3+Wnb643o49MprYYcTTupzHf8scK3SDTzcf42Gw==
   /@types/webpack-env/1.16.0:
     dev: false
     resolution:
@@ -6183,14 +6167,6 @@ packages:
       '@babel/core': 7.13.10
       '@babel/preset-react': 7.12.13_@babel+core@7.13.10
       '@babel/preset-typescript': 7.13.0_@babel+core@7.13.10
-      '@types/react': 17.0.3
-      '@types/react-dom': 17.0.3
-      '@types/react-redux': 7.1.16
-      '@types/react-router-dom': 5.1.7
-      '@types/styled-react-modal': 1.2.0
-      '@types/webpack-env': 1.16.0
-      '@typescript-eslint/eslint-plugin': 4.18.0_f26dcf5ec38a04241b14c26bc931244e
-      '@typescript-eslint/parser': 4.19.0_eslint@7.22.0+typescript@4.2.3
       babel-loader: 8.2.2_33e77a109b1e91c7a8de8d1fb809034a
       bundle-loader: 0.5.6
       eslint: 7.22.0
@@ -6204,17 +6180,16 @@ packages:
       redux: 4.0.5
       redux-thunk: 2.3.0
       serve: 11.3.2
-      source-map-loader: 2.0.1_webpack@5.28.0
       styled-components: 5.2.1_react-dom@17.0.2+react@17.0.2
       styled-react-modal: 2.0.1_bbdb8d52999b72a1711e5d621e13b66d
-      typescript: 4.2.3
       webpack: 5.28.0_webpack-cli@4.5.0
       webpack-cli: 4.5.0_79e826fa6ba9b3d255951ec0a8e55c34
       webpack-dev-server: 3.11.2_webpack-cli@4.5.0+webpack@5.28.0
+      webpack-merge: 5.7.3
     dev: false
     name: '@rush-temp/account'
     resolution:
-      integrity: sha512-3m2lh5WjG0gos6VxGhnr1+8JyCWHMfta1XmbgFUYZJxJXDr+6qOUeqnCquRwfoXvEcib3D6pj9PNAIga9yWiVA==
+      integrity: sha512-0GRMxxouRw30FFDe+Q3x5/847Q7kzxns+gBG6ivJBMQrhG5oXLYxPOXOmIg7uzv/IGELNGXWNVAogheAQlgfXQ==
       tarball: file:projects/account.tgz
     version: 0.0.0
   file:projects/blog.tgz:
@@ -6256,15 +6231,6 @@ packages:
     dependencies:
       '@babel/core': 7.13.10
       '@babel/preset-react': 7.12.13_@babel+core@7.13.10
-      '@babel/preset-typescript': 7.13.0_@babel+core@7.13.10
-      '@types/react': 17.0.3
-      '@types/react-dom': 17.0.3
-      '@types/react-redux': 7.1.16
-      '@types/react-router-dom': 5.1.7
-      '@types/styled-components': 5.1.9
-      '@types/webpack-env': 1.16.0
-      '@typescript-eslint/eslint-plugin': 4.18.0_f26dcf5ec38a04241b14c26bc931244e
-      '@typescript-eslint/parser': 4.19.0_eslint@7.22.0+typescript@4.2.3
       babel-loader: 8.2.2_33e77a109b1e91c7a8de8d1fb809034a
       bundle-loader: 0.5.6
       eslint: 7.22.0
@@ -6281,14 +6247,14 @@ packages:
       serve: 11.3.2
       source-map-loader: 2.0.1_webpack@5.28.0
       styled-components: 5.2.1_react-dom@17.0.2+react@17.0.2
-      typescript: 4.2.3
       webpack: 5.28.0_webpack-cli@4.5.0
       webpack-cli: 4.5.0_79e826fa6ba9b3d255951ec0a8e55c34
       webpack-dev-server: 3.11.2_webpack-cli@4.5.0+webpack@5.28.0
+      webpack-merge: 5.7.3
     dev: false
     name: '@rush-temp/main'
     resolution:
-      integrity: sha512-89tsuASqhj8ewmhrz93mUI+zF8FBhVTlvdLBiZP2X6mXSWR6iC390lxGRGIe2YVHhGdSFe6N74fj1/d9ktPPOg==
+      integrity: sha512-IizTIKW558z+4gedDcBnM30CJfINOH5cNzR9RWc7zOg9H8iVVwIc6b3BWdCvncxmvzgcWTAWW9VRCBrmea4+7Q==
       tarball: file:projects/main.tgz
     version: 0.0.0
   file:projects/product.tgz:
@@ -6296,14 +6262,6 @@ packages:
       '@babel/core': 7.13.10
       '@babel/preset-react': 7.12.13_@babel+core@7.13.10
       '@babel/preset-typescript': 7.13.0_@babel+core@7.13.10
-      '@types/react': 17.0.3
-      '@types/react-dom': 17.0.3
-      '@types/react-redux': 7.1.16
-      '@types/react-router-dom': 5.1.7
-      '@types/styled-components': 5.1.9
-      '@types/webpack-env': 1.16.0
-      '@typescript-eslint/eslint-plugin': 4.18.0_f26dcf5ec38a04241b14c26bc931244e
-      '@typescript-eslint/parser': 4.19.0_eslint@7.22.0+typescript@4.2.3
       babel-loader: 8.2.2_33e77a109b1e91c7a8de8d1fb809034a
       bundle-loader: 0.5.6
       eslint: 7.22.0
@@ -6315,16 +6273,14 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-router-dom: 5.2.0_react@17.0.2
       serve: 11.3.2
-      source-map-loader: 2.0.1_webpack@5.28.0
       styled-components: 4.4.1_react-dom@17.0.2+react@17.0.2
-      typescript: 4.2.3
       webpack: 5.28.0_webpack-cli@4.5.0
       webpack-cli: 4.5.0_79e826fa6ba9b3d255951ec0a8e55c34
       webpack-dev-server: 3.11.2_webpack-cli@4.5.0+webpack@5.28.0
     dev: false
     name: '@rush-temp/product'
     resolution:
-      integrity: sha512-v+KhdDALQLBXN5C7xw1HrM5DLk3X8zRy4/jbNpRMx/DjGh9xc8Qmb9FyhcwuR7+F5T7NlXnDzX3I626ImgFkQQ==
+      integrity: sha512-W57pQOwtoGfoU4t75Qqr8LAqe8q3rlbS2tT2IJFddrjdllcVpqoLuno2k+fQFLzhmDe0a5iCtd3WKFKZaGExfA==
       tarball: file:projects/product.tgz
     version: 0.0.0
 specifiers:
@@ -6339,8 +6295,6 @@ specifiers:
   '@types/react-dom': ^17.0.2
   '@types/react-redux': ^7.1.16
   '@types/react-router-dom': ^5.1.7
-  '@types/styled-components': ^5.1.9
-  '@types/styled-react-modal': ^1.2.0
   '@types/webpack-env': ^1.16.0
   '@typescript-eslint/eslint-plugin': ~4.18.0
   '@typescript-eslint/parser': ^4.18.0
@@ -6364,3 +6318,4 @@ specifiers:
   webpack: ^5.26.0
   webpack-cli: ^4.5.0
   webpack-dev-server: ^3.11.2
+  webpack-merge: ^5.7.3
