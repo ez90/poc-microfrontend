@@ -1,8 +1,2 @@
-import { combineReducers } from 'redux';
-import userReducer from './user';
+export * from './modal';
 
-const globalReducer = combineReducers({
-    user: userReducer,
-});
-
-export default (state, action) => globalReducer(state, action);

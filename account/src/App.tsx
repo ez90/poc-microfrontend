@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import createStore from './mainRedux/createStore';
-import { modalReducer } from './redux/reducers/modal';
+import { modalReducer } from './redux/reducers';
 
 import Settings from './components/Settings';
 import ShowModalButton from './components/ShowModalButton';
