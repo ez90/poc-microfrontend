@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import HomePage from './components/HomePage';
 
 import createStore from './redux/createStore';
-import {SWrapper} from './styles';
+import {GlobalStyle, SWrapper} from './styles';
 
 // Lazy loaded sub-applications
 const Product = React.lazy(() => import('product/App'));
@@ -26,6 +26,7 @@ const App = () => {
 
     return (
         <Provider store={store}>
+            <GlobalStyle />
             <BrowserRouter>
                 <Header sitename="POC Micro-frontend"/>
                 <Navbar increaseCount={increaseCount}/>

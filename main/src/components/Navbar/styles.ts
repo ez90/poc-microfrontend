@@ -6,9 +6,19 @@ export const SWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 15px;
+  font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
 `;
 
 export const SLink = styled(Link)`
-  padding-right: 25px;
+  text-decoration: none;
+  padding: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    background-color: #efefef;
+  }
 `;
