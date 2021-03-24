@@ -15,7 +15,7 @@ export interface BlogProps {
 const Blog: FC<BlogProps> = ({posts}: BlogProps): ReactElement => (
     <SWrapper>
         {posts.map((post) => (
-            <SPost key={post.slug}>
+            <SPost key={post.title}>
                 <SPostTitle>{post.title}</SPostTitle>
                 <SPostContent>{post.content}</SPostContent>
             </SPost>
