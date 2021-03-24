@@ -14,7 +14,7 @@ const Product = React.lazy(() => import('product/App'));
 const Account = React.lazy(() => import('account/App'));
 
 const App = () => {
-    const store = createStore();
+    const store = createStore({});
     const [count, setCount] = React.useState(0);
 
     // @TODO: Find a better solution
