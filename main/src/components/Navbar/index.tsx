@@ -6,6 +6,7 @@ const Navbar = ({increaseCount}) => (
         <SLink to='/'>Home</SLink>
         <SLink to='/product/' replace>Products</SLink>
         <SLink to='/account/'>Account</SLink>
+        <SLink to='/blog/'>Blog</SLink>
     </SWrapper>
 );
 

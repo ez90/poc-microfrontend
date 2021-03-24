@@ -12,6 +12,7 @@ import {GlobalStyle, SWrapper} from './styles';
 // Lazy loaded sub-applications
 const Product = React.lazy(() => import('product/App'));
 const Account = React.lazy(() => import('account/App'));
+const Blog = React.lazy(() => import('blog/App'));
 
 const store = createStore({});
 
@@ -42,6 +43,9 @@ const App = () => {
                             </Route>
                             <Route path="/account/">
                                 <Account store={store} key={count}/>
+                            </Route>
+                            <Route path="/blog/">
+                                <Blog />
                             </Route>
                         </Switch>
                     </React.Suspense>

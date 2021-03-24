@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 
-const Blog = () => {
-    return (
-        <div>Blog</div>
-    )
+import {SWrapper , SPost, SPostTitle, SPostContent} from '../../styles';
+
+
+export interface Post {
+    title: string;
+    content?: string;
 }
+
+export interface BlogProps {
+    posts: Array<Post>;
+}
+
+const Blog: FC<BlogProps> = ({posts}: BlogProps): ReactElement => (
+    <SWrapper>
+        {posts.map((post) => (
+            <SPost key={post.slug}>
+                <SPostTitle>{post.title}</SPostTitle>
+                <SPostContent>{post.content}</SPostContent>
+            </SPost>
+        ))}
+    </SWrapper>
+)
 
 export default Blog;

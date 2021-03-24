@@ -1,6 +1,19 @@
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
 
-export const SLink = styled(Link)`
+export const SPost = styled.div`
   padding-right: 25px;
+  margin-right: 20%;
+  border-bottom: 1px solid #ccc;
+`;
+
+export const SPostTitle = styled.h2`
+  color: #0743DA;
+`;
+
+export const SPostContent = styled.p`
+  padding-right: 10px;
+`;
+
+export const SWrapper = styled.main`
+  padding: 25px;
 `;

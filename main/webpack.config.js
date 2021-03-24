@@ -42,6 +42,7 @@ module.exports = {
             remotes: {
                 product: "product",
                 account: "account",
+                blog: "blog",
             },
             shared: [
                 {
@@ -58,4 +59,4 @@ module.exports = {
             template: "./public/index.html",
         }),
     ],
-};
+}
