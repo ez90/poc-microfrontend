@@ -400,6 +400,10 @@
     {
       "packageName": "main",
       "projectFolder": "main"
-    }
+    },
+     {
+       "packageName": "blog",
+       "projectFolder": "blog"
+     }
   ]
 }
