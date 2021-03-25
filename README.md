@@ -60,10 +60,12 @@ Run `npm start` inside each repo respectively.
 cd main && npm start
 cd product && npm start
 cd account && npm start
+cd blog && npm start
 ```
 
 This will build and serve your applications on ports 3001, 3002, 3003
 
+- [localhost:300](http://localhost:3000/) (expose featured application "blog")
 - [localhost:3001](http://localhost:3001/) (expose featured application "product")
 - [localhost:3002](http://localhost:3002/) (expose featured application "account")
 - [localhost:3003](http://localhost:3003/) (will use exposed featured applications component)

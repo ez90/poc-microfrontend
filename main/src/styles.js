@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
-
 export const SWrapper = styled.main`
   margin: 0;
   padding: 25px;
