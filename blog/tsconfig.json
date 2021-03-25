@@ -12,9 +12,5 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "paths": {
-      "account/App": ["./account/src/App"],
-      "product/App": ["./product/src/App"]
-    }
   },
 }
