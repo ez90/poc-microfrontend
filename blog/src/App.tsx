@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import Blog from './components/Blog';
+import { SWrapper, SContent } from './styles';
 
 const posts = [
     {
@@ -22,9 +23,9 @@ const posts = [
 
 const App = (): ReactElement => (
     <>
-        <h1>Usage of typescript</h1>
+        <h1>POC context: We could use typescript ?</h1>
         <p>
-            👋 I&apos;m the feature application written with Typescript !
+            👋 I&apos;m a feature application written with Typescript !
         </p>
         <p>
             Here we just display a <strong>typed</strong> react Blog component with <strong>typed</strong> props that
@@ -33,7 +34,12 @@ const App = (): ReactElement => (
         <p>
             Yes ! a lot of typed things, but a more robust code, less errors in the future and many more 🙂
         </p>
-        <Blog posts={posts}/>
+        <SWrapper>
+            <SContent>
+                <h2>Overview of typescript</h2>
+                <Blog posts={posts}/>
+            </SContent>
+        </SWrapper>
     </>
 );
 

@@ -6,11 +6,22 @@ export const SLink = styled(Link)`
   padding-right: 10px;
   height: 50px;
   line-height: 50px;
+  
   &:visited {
     color: #000;
   }
+  
   &:hover {
-    /* background-color: #e2e2e2; */
     text-decoration: underline;
   }
+`;
+
+export const SWrapper = styled.main`
+  padding: 25px;
+  background-color: #fff;
+`;
+
+export const SContent = styled.div`
+  padding: 10px 15px;
+  background-color: #fff;
 `;
