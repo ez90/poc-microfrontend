@@ -7,17 +7,30 @@ export const SModal = Modal.styled`
     background-color: #ffffff;
     overflow: hidden;
     width: 500px;
-    height: 500px;
-`;
-
-export const SModalButton = styled.button`
-    text-align: center;
-`;
-
-export const SModalTitle = styled.div`
-    text-align: center;
 `;
 
 export const SModalParagraph = styled.p`
-    text-align: center;
+  padding: 0 20px;
+  text-align: justify;
+  font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
+`;
+
+export const SModalHeader = styled.div`
+  height: 50px;
+  background-color: #0242d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
+  position: relative;
+  color: #fff;
+`;
+
+export const SModalHeaderCross = styled.button`
+  background: transparent;
+  border: none !important;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #fff;
 `;
