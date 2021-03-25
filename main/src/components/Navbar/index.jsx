@@ -3,10 +3,10 @@ import {SLink, SWrapper} from './styles';
 
 const Navbar = ({increaseCount}) => (
     <SWrapper onClick={increaseCount}>
-        <SLink to='/'>Home</SLink>
-        <SLink to='/product/' replace>Products</SLink>
-        <SLink to='/account/'>Account</SLink>
-        <SLink to='/blog/'>Blog</SLink>
+        <SLink exact={true}  activeClassName='is-active' to='/'>Home</SLink>
+        <SLink activeClassName='is-active' to='/product/' replace>Products</SLink>
+        <SLink activeClassName='is-active' to='/account/'>Account</SLink>
+        <SLink activeClassName='is-active' to='/blog/'>Blog</SLink>
     </SWrapper>
 );
 

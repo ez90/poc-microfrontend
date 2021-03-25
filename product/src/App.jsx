@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar';
 
 import { SWrapper, SContent } from './styles';
 
 const App = () => (
     <Router>
-        <h1>Each featured applications have their own router<br/> not conflicting with the main global router</h1>
+        <h1>POC context: Each featured applications have their own router<br/> not conflicting with the main global router</h1>
         <p>👋 I&apos;m the product feature application and i have my own router.</p>
         <p>Look below, you can see a sub-menu which is entirely handle by the current featured applications (aka child
             SPA) router.</p>

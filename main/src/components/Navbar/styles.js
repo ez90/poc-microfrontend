@@ -1,16 +1,18 @@
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const SWrapper = styled.div`
   height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 15px;
   font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+  padding: 0 25px;
+  margin-top: 7px;
+
 `;
 
-export const SLink = styled(Link)`
+export const SLink = styled(NavLink)`
   text-decoration: none;
   padding: 0 10px;
   height: 50px;
@@ -19,6 +21,10 @@ export const SLink = styled(Link)`
     color: #000;
   }
   &:hover {
-    background-color: #efefef;
+    background-color: #f6f6f6;
   }
+  &.is-active{
+    transition: background-color .3s ease;
+    background-color: #efefef;
+   }
 `;
