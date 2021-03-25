@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, compose } from 'redux'
 import { userReducer } from './reducers/user'
 
 // Define the Reducers that will always be present in the application
@@ -7,7 +7,7 @@ const staticReducers = {
 }
 
 // Configure the store
-export default function configureStore(initialState) {
+export default function configureStore() {
   const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
       ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})

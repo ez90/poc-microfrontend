@@ -28,7 +28,7 @@ const Modal = () => {
         </SModalHeaderCross>
       </SModalHeader>
       <SModalParagraph>
-        This modal connection dispatch a value to the reducer "user" instantiate
+        This modal connection dispatch a value to the reducer &quot;user&quot; instantiate
         by the main application
       </SModalParagraph>
       <div style={{ textAlign: 'center', margin: '20px 0' }}>

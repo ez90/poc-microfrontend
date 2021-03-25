@@ -1,11 +1,9 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ESLintPlugin = require("eslint-webpack-plugin");
+const { merge } = require('webpack-merge');
 const {ModuleFederationPlugin} = require("webpack").container;
 const path = require("path");
+const common = require('../common/config/webpack.common.js');
 
-module.exports = {
-    entry: "./src/index",
-    mode: "development",
+module.exports = merge(common, {
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         port: 3003,
@@ -14,28 +12,7 @@ module.exports = {
     output: {
         publicPath: "http://localhost:3003/",
     },
-    resolve: {
-        extensions: [".ts", ".tsx", ".js"],
-    },
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                loader: "babel-loader",
-                exclude: /node_modules/,
-                options: {
-                    presets: [
-                        "@babel/preset-react",
-                        "@babel/preset-typescript"
-                    ],
-                },
-            },
-        ],
-    },
     plugins: [
-        new ESLintPlugin({
-            extensions: ["js", "jsx", "ts", "tsx"],
-        }),
         new ModuleFederationPlugin({
             name: "main",
             library: {type: "var", name: "main"},
@@ -44,19 +21,6 @@ module.exports = {
                 account: "account",
                 blog: "blog",
             },
-            shared: [
-                {
-                    react: {
-                        singleton: true,
-                    },
-                    "react-dom": {
-                        singleton: true,
-                    },
-                },
-            ],
         }),
-        new HtmlWebpackPlugin({
-            template: "./public/index.html",
-        }),
-    ],
-}
+    ]
+});
