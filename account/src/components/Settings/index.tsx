@@ -1,28 +1,15 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { setUserName } from '../../mainRedux/actions';
 
 const Settings = () => {
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
+  const user = useSelector((state) => state?.user);
 
   return (
-    <>
-      <div>Change the name</div>
-
-      <div>
-        <input
-          style={{ marginRight: '10px' }}
-          type='text'
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-        <button onClick={() => dispatch(setUserName(name))}>
-          Dispatch App 2 new name
-        </button>
-      </div>
-    </>
+    <button onClick={() => dispatch(setUserName(user?.name ? '' : 'John Doe'))}>
+      {user?.name ? 'Log out' : 'Log in'}
+    </button>
   );
 };
 

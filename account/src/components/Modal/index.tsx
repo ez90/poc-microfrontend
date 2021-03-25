@@ -1,7 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setModalIsOpen } from '../../redux/actions';
-import { SModal, SModalTitle, SModalButton, SModalParagraph } from './styles';
+import Settings from '../Settings';
+import {
+  SModal,
+  SModalParagraph,
+  SModalHeader,
+  SModalHeaderCross,
+} from './styles';
 
 const Modal = () => {
   const dispatch = useDispatch();
@@ -15,17 +21,18 @@ const Modal = () => {
       onBackgroundClick={closeModal}
       onEscapeKeydown={closeModal}
     >
-      <SModalTitle>New modal</SModalTitle>
+      <SModalHeader>
+        <span>Modal connection</span>
+        <SModalHeaderCross type='button' onClick={closeModal}>
+          X
+        </SModalHeaderCross>
+      </SModalHeader>
       <SModalParagraph>
-        This modal is displayed when the property isOpen linked to the reducer modal introduce by the app Account is true.
-
-        This example show that we can have some reducers from the main application and some reducers from the feature application working at the same time.
-
+        This modal connection dispatch a value to the reducer "user" instantiate
+        by the main application
       </SModalParagraph>
-      <div style={{textAlign: 'center'}}>
-        <SModalButton type='button' onClick={closeModal}>
-          Close the modal
-        </SModalButton>
+      <div style={{ textAlign: 'center', margin: '20px 0' }}>
+        <Settings />
       </div>
     </SModal>
   );

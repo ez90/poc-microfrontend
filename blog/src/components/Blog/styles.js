@@ -14,6 +14,6 @@ export const SPostContent = styled.p`
   padding-right: 10px;
 `;
 
-export const SWrapper = styled.main`
+export const SPostWrapper = styled.main`
   padding: 25px;
 `;
