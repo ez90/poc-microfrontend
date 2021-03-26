@@ -22,7 +22,7 @@ const Modal = () => {
       onEscapeKeydown={closeModal}
     >
       <SModalHeader>
-        <span>Modal connection</span>
+        <span>User name modification</span>
         <SModalHeaderCross type='button' onClick={closeModal}>
           X
         </SModalHeaderCross>

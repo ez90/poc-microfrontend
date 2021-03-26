@@ -1,0 +1,36 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "babel-loader": "^8.2.2",
+    "bundle-loader": "^0.5.6",
+    "eslint": "~7.22.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-webpack-plugin": "~2.5.2",
+    "html-webpack-plugin": "^5.3.1",
+    "serve": "^11.3.2",
+    "webpack": "^5.26.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack --mode production",
+    "serve": "serve dist -p 3005",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.2.1",
+    "styled-react-modal": "^2.0.1"
+  }
+}

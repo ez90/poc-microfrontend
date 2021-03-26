@@ -394,16 +394,20 @@
       "projectFolder": "product"
     },
     {
-      "packageName": "account",
-      "projectFolder": "account"
+      "packageName": "shopping",
+      "projectFolder": "shopping"
     },
     {
       "packageName": "main",
       "projectFolder": "main"
     },
-     {
-       "packageName": "blog",
-       "projectFolder": "blog"
-     }
+    {
+      "packageName": "blog",
+      "projectFolder": "blog"
+    },
+    {
+      "packageName": "settings",
+      "projectFolder": "settings"
+    }
   ]
 }

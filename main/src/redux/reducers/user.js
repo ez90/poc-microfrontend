@@ -1,5 +1,6 @@
 const initialState = {
-    name: '',
+    name: 'John DOE',
+    isConnected: false,
 };
 
 export const userReducer = (state = initialState, { type, ...payload }) => {
@@ -8,6 +9,11 @@ export const userReducer = (state = initialState, { type, ...payload }) => {
             return {
                 ...state,
                 name: payload.name,
+            };
+        case 'SET_USER_IS_CONNECTED':
+            return {
+                ...state,
+                isConnected: payload.isConnected,
             };
         default:
             return state;

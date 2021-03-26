@@ -6,10 +6,15 @@ const Settings = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state?.user);
 
+  const [newName, setNewName] = React.useState(user);
+
   return (
-    <button onClick={() => dispatch(setUserName(user?.name ? '' : 'John Doe'))}>
-      {user?.name ? 'Log out' : 'Log in'}
-    </button>
+    <>
+      <input type="text" id="name" name="name" onChange={(e) => setNewName(e.target.value)}></input>
+      <button onClick={() => dispatch(setUserName(newName))}>
+        Modify
+      </button>
+    </>
   );
 };
 

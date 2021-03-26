@@ -6,22 +6,20 @@ const common = require('../common/config/webpack.common.js');
 module.exports = merge(common, {
     devServer: {
         contentBase: path.join(__dirname, "dist"),
-        port: 3000,
+        port: 3002,
         historyApiFallback: true,
     },
     output: {
-        publicPath: "http://localhost:3000/",
+        publicPath: "http://localhost:3002/",
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: "main",
-            library: {type: "var", name: "main"},
-            remotes: {
-                product: "product",
-                shopping: "shopping",
-                blog: "blog",
-                settings: "settings",
+            name: "settings",
+            library: {type: "var", name: "settings"},
+            filename: "remoteEntry.js",
+            exposes: {
+                "./App": "./src/App",
             },
         }),
     ]
-});
+  });
