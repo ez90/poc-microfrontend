@@ -10,20 +10,13 @@ import { ModalProvider } from 'styled-react-modal';
 
 const App = () => (
   <>
-    <h1>Usage of multi state</h1>
-    <p>👋 I&apos;m the feature application account using a global state from the main application and an internal state !</p>
+    <h1>POC context: Each feature application have a state that is not conflicting with the main application state</h1>
+    <p>👋 I&apos;m the feature application account using states and redux !</p>
     <p>
       This example is based on redux.
     </p>
     <p>
-      There is a first reducer with the key &quot;user&quot; instanciated by the main application.<br />
-      This reducer manage the connexion of a user.<br />
-      If a user is connected, the name is displayed in the header in main application.<br />
-      The feature application account also deals with this reducer (it manages the action of connection/disconnection).
-    </p>
-    <p>
-      There is a second reducer with the key &quot;modal&quot; instanciated by the feature application account.<br />
-      This reducer handle the display of an internal modal connection.
+      Feature application account use a state of main application for handle connection and use his own state to display the following modal :
     </p>
     <ShowModalButton />
     <p>
