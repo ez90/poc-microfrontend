@@ -38,7 +38,7 @@
     //    * (Required) A short summary of the custom command to be shown when printing command line
     //    * help, e.g. "rush --help".
     //    */
-      "summary": "start it dude",
+      "summary": "start all apps at once",
     // 
     //   /**
     //    * A detailed description of the command to be shown when printing command line
@@ -48,7 +48,7 @@
     //    * Whenever you introduce commands/parameters, taking a little time to write meaningful
     //    * documentation can make a big difference for the developer experience in your repo.
     //    */
-    //   "description": "This is an example custom command that runs separately for each project",
+      "description": "This is a custom command that runs separately each project instead of doing many npm start",
     // 
     //   /**
     //    * By default, Rush operations acquire a lock file which prevents multiple commands from executing simultaneously
@@ -65,7 +65,7 @@
     //    * simultaneously for multiple projects.  Similar to "rush build", regardless of parallelism
     //    * projects will not start processing until their dependencies have completed processing.
     //    */
-      "enableParallelism": true,
+      "enableParallelism": true
     // 
     //   /**
     //    * Normally projects will be processed according to their dependency order: a given project will not start
