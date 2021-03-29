@@ -7,7 +7,7 @@ const ShowModalButton = () => {
 
   return (
     <button type='button' onClick={() => dispatch(setModalIsOpen(true))}>
-      Show modal connection
+      Show modal
     </button>
   );
 };

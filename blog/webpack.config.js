@@ -8,11 +8,11 @@ module.exports = {
   mode: "development",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
-    port: 3000,
+    port: 3003,
     historyApiFallback: true,
   },
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "http://localhost:3003/",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],

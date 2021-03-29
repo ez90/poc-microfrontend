@@ -25,20 +25,20 @@ const HomePage = () => (
                 </li>
             </ul>
             <h2>What will be used ?</h2>
+            <h3>Rush (<a target="_blank" rel="noreferrer" href="https://rushjs.io/">https://rushjs.io/</a>)</h3>
             <p>
-                <h3>Rush (<a target="_blank" rel="noreferrer" href="https://rushjs.io/">https://rushjs.io/</a>)</h3>
                 Rush will be in charge of packages management, on this
                 project, the
                 main
                 goal is to share
                 common packages between applications and by the way reduce the whole project size.
             </p>
+            <h3>React (<a target="_blank" rel="noreferrer" href="https://fr.reactjs.org/">https://fr.reactjs.org/</a>)</h3>
             <p>
-                <h3>React (<a target="_blank" rel="noreferrer" href="https://fr.reactjs.org/">https://fr.reactjs.org/</a>)</h3>
                 All applications are written with React.
             </p>
+            <h3>Webpack (<a target="_blank" rel="noreferrer" href="https://webpack.js.org/">https://webpack.js.org/</a>)</h3>
             <p>
-                <h3>Webpack (<a target="_blank" rel="noreferrer" href="https://webpack.js.org/">https://webpack.js.org/</a>)</h3>
                 Webpack make it possible with help of
                 module-federation plugin to expose our `featured applications` to the `main application` and give us
                 the possibility to use `featured applications` as a React component for `main application`

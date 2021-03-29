@@ -1,18 +1,13 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import {Provider} from 'react-redux';
+import {BrowserRouter, Switch} from "react-router-dom";
+import {Provider } from 'react-redux';
 
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import HomePage from './components/HomePage';
 
 import createStore from './redux/createStore';
 import {GlobalStyle, SWrapper} from './styles';
-
-// Lazy loaded sub-applications
-const Product = React.lazy(() => import('product/App'));
-const Account = React.lazy(() => import('account/App'));
-const Blog = React.lazy(() => import('blog/App'));
+import Routes from './routes';
 
 const store = createStore({});
 
@@ -35,18 +30,7 @@ const App = () => {
                 <SWrapper>
                     <React.Suspense fallback={"Loading"}>
                         <Switch>
-                            <Route exact path="/">
-                                <HomePage/>
-                            </Route>
-                            <Route path="/product/">
-                                <Product key={count}/>
-                            </Route>
-                            <Route path="/account/">
-                                <Account store={store} key={count}/>
-                            </Route>
-                            <Route path="/blog/">
-                                <Blog />
-                            </Route>
+                            <Routes store={store} count={count} />
                         </Switch>
                     </React.Suspense>
                 </SWrapper>
